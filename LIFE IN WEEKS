@@ -1,6 +1,4 @@
 age = input()
-# 🚨 Don't change the code above 👆
-# Write your code below this line 👇
 Years = 90 - int(age)
 weeks_left = 52 * (Years)
 print(f"You have " + weeks_left + " weeks left")
