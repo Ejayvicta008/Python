@@ -1,42 +1,25 @@
 print("The Love Calculator is calculating your score...")
-name1 = input() # What is your name?
-name2 = input() # What is their name?
-# 🚨 Don't change the code above 👆
-# Write your code below this line 👇
+name1 = input()  # What is your name?
+name2 = input()  # What is their name?
 
-name11 = name1.lower
-name22 = name2.lower
+combined_names = name1 + name2
+lower_names = combined_names.lower()
+t = lower_names.count("t")
+r = lower_names.count("r")
+u = lower_names.count("u")
+e = lower_names.count("e")
+first_digit = t + r + u + e
 
+l = lower_names.count("l")
+o = lower_names.count("o")
+v = lower_names.count("v")
+e = lower_names.count("e")
+second_digit = l + o + v + e
 
-# Initialize love score
-LoveScore = 0
-
-# Define the words to search for
-word_true = "true"
-word_love = "love"
-
-# Function to count occurrences of characters in a string
-def count_occurrences(word, name):
-    count = 0
-    for char in word:
-        count += name.count(char)
-    return count
-
-# Count occurrences for name1
-count_true = count_occurrences(word_true, name1)
-count_love = count_occurrences(word_love, name1)
-
-# Count occurrences for name2
-count_true += count_occurrences(word_true, name2)
-count_love += count_occurrences(word_love, name2)
-
-# Calculate love score
-LoveScore = int(f"{count_true}{count_love}")
-
-# Determine message based on love score
-if LoveScore < 10 or LoveScore > 90:
-    print(f"Your score is {LoveScore}, you go together like coke and mentos.")
-elif 40 <= LoveScore <= 50:
-    print(f"Your score is {LoveScore}, you are alright together.")
+score = int(str(first_digit) + str(second_digit))
+if (score < 10) or (score > 90):
+  print(f"Your score is {score}, you go together like coke and mentos.")
+elif (score >= 40) and (score <= 50):
+  print(f"Your score is {score}, you are alright together.")
 else:
-    print(f"Your score is {LoveScore}.")
+  print(f"Your score is {score}.")
